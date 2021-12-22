@@ -16,8 +16,7 @@ const apiRouter = require("./routes/apiRouter");
 
 const app = express();
 // view 경로 설정
-app.set("views", `${__dirname}/views`);
-app.use(express.static("src"));
+app.use(express.static("public"));
 
 // 화면 구성 엔진을 ejs로 설정
 app.set("view engine", "ejs");
@@ -41,7 +40,7 @@ app.use(bodyParser.json({ limit: 5000000 }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 // 라우터 추가하기
 
-app.use("/", indexRouter);
+app.use("/public", indexRouter);
 app.use("/login", loginRouter); // 로그인 페이지로 이동
 
 app.use("/api", apiRouter); // 댓글 전송, 수정, 삭제, like 전송 등
