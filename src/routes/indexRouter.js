@@ -5,7 +5,7 @@ const router = Router();
 const { setLoggedInStatus } = require("../middlewares");
 
 router.get("/", setLoggedInStatus, (req, res) => {
-  res.render("/views/index.html", { isLogined: req.isLoggedIn });
+  res.render("../public/views/index.html", { isLogined: req.isLoggedIn });
 });
 
 module.exports = router;

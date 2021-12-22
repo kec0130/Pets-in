@@ -40,7 +40,7 @@ app.use(bodyParser.json({ limit: 5000000 }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 // 라우터 추가하기
 
-app.use("/public", indexRouter);
+app.use("/", indexRouter);
 app.use("/login", loginRouter); // 로그인 페이지로 이동
 
 app.use("/api", apiRouter); // 댓글 전송, 수정, 삭제, like 전송 등
