@@ -10,7 +10,7 @@ module.exports = {
     myPetBoardDetail: "/src/js/petStory/index.js",
     editorPage: "/src/js/editorPage.js",
     login: "/src/js/login.js",
-    index: "./src/js/main.js",
+    index: "/src/js/main.js",
   },
   devtool: "inline-source-map",
   plugins: [new CleanWebpackPlugin()],
