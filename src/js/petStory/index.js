@@ -13,10 +13,10 @@ import {
   showHiddenBox,
 } from "./handleComment.js";
 
-import "../../style/reset.css";
-import "../../style/index.css";
-import "../../style/myPetBoard.css";
-import "../../style/myPetBoardDetail.css";
+// import "../../style/reset.css";
+// import "../../style/index.css";
+// import "../../style/myPetBoard.css";
+// import "../../style/myPetBoardDetail.css";
 
 const run = () => {
   window.addEventListener("DOMContentLoaded", async () => {
