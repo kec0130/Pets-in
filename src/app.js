@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 app.use(cors()); // CORS 미들웨어 등록
 
-app.set("views", `${__dirname}/views`);
+app.set("views", `${__dirname}`);
 app.use(express.static("src"));
 app.use(express.static("dist"));
 
