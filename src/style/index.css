@@ -211,7 +211,7 @@ nav {
   align-items: center;
 }
 
-.board__content a{
+.board__content a {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -262,18 +262,23 @@ footer {
   height: 50px;
   transition: 0.5s;
   background-size: 200% auto;
-  color: black;            
+  color: black;
   box-shadow: 0 0 20px #eee;
   display: block;
 }
 
 .footer__top--msg {
-  background-image: linear-gradient(to right, #ff9933 0%, #FFC837  51%, #ff9933  100%);
+  background-image: linear-gradient(
+    to right,
+    #ff9933 0%,
+    #ffc837 51%,
+    #ff9933 100%
+  );
 }
 
 .footer__top--msg h2 {
   padding: 10px;
-  text-align: left;  
+  text-align: left;
 }
 
 .footer__top--msg:hover {
@@ -281,7 +286,6 @@ footer {
   color: #fff;
   text-decoration: none;
 }
-
 
 .footer__top--logo {
   width: 2.148vw;
@@ -485,7 +489,7 @@ footer {
     align-items: center;
   }
 
-  .board__content a{
+  .board__content a {
     display: flex;
     justify-content: center;
     flex-direction: column;
