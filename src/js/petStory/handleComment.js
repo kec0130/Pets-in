@@ -130,12 +130,19 @@ const clickCommentToolBox = () => {
   const commentUl = document.querySelector(".comment__list");
 
   commentUl.addEventListener("click", (e) => {
+    document.querySelectorAll(".tool__box").forEach((el) => {
+      el.classList.add("hidden");
+    });
+
     if (e.target.classList.contains("tool")) {
       e.target.nextElementSibling.classList.toggle("hidden");
     }
 
     if (e.target.classList.contains("tool__update")) {
       e.preventDefault();
+      document.querySelectorAll(".tool__box").forEach((el) => {
+        el.classList.add("hidden");
+      });
       let commentId = e.target.dataset.commentId;
       let copyParentHTML =
         e.target.parentElement.parentElement.parentElement.parentElement
@@ -150,7 +157,13 @@ const clickCommentToolBox = () => {
         e.target.parentElement.parentElement.parentElement.parentElement;
       toolBox.classList.add("hidden");
 
-      locationComment.innerHTML = `
+      e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].classList.add(
+        "display__hidden"
+      );
+
+      const div = document.createElement("div");
+      div.classList.add("comment__box");
+      div.innerHTML = `
         <div class="comment-feed__input">
           <div class="comment-feed__content">
             <textarea class="comment-feed__textarea" placeholder="댓글을 입력하세요">${copyParentContent}</textarea>
@@ -161,6 +174,10 @@ const clickCommentToolBox = () => {
           </div>
         </div>
       `;
+
+      e.target.parentElement.parentElement.parentElement.parentElement.parentElement.prepend(
+        div
+      );
 
       document
         .querySelector(".update__submit")
@@ -178,7 +195,10 @@ const clickCommentToolBox = () => {
       document
         .querySelector(".update__cancle")
         .addEventListener("click", (e) => {
-          locationComment.innerHTML = copyParentHTML;
+          e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[1].classList.remove(
+            "display__hidden"
+          );
+          e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[0].remove();
           toolBox.classList.remove("hidden");
         });
     }
@@ -193,11 +213,18 @@ const clickCommentToolBox = () => {
             location.reload();
           }, 1000);
         }
+      } else {
+        document.querySelectorAll(".tool__box").forEach((el) => {
+          el.classList.add("hidden");
+        });
       }
     }
 
     if (e.target.classList.contains("tool__re--update")) {
       e.preventDefault();
+      document.querySelectorAll(".tool__box").forEach((el) => {
+        el.classList.add("hidden");
+      });
       let reCommentId = e.target.dataset.commentId;
       let reCopyParentHTML =
         e.target.parentElement.parentElement.parentElement.parentElement
@@ -255,6 +282,10 @@ const clickCommentToolBox = () => {
             location.reload();
           }, 1000);
         }
+      } else {
+        document.querySelectorAll(".tool__box").forEach((el) => {
+          el.classList.add("hidden");
+        });
       }
     }
   });
