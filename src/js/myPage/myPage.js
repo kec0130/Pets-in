@@ -1,4 +1,4 @@
-import { getTime } from "../utils";
+import { getTime } from "../utils.js";
 
 const myPage = async () => {
   const response = await fetch("/api/user-detail");
