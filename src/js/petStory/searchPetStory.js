@@ -1,7 +1,3 @@
-import "../../style/reset.css";
-import "../../style/index.css";
-import "../../style/myPetBoard.css";
-
 const searchPetStory = () => {
   const searchBtn = document.querySelector(".search__button");
   const selectBox = document.querySelector(".main__select");
