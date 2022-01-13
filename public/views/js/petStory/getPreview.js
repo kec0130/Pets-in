@@ -10,7 +10,6 @@ const getPreviewData = async () => {
 
 const getmyPetBoardList = (data) => {
   const { data: myPetBoardList } = data;
-  console.log("getmyPetBoardList 테스트: ", getmyPetBoardList);
   return myPetBoardList;
 };
 

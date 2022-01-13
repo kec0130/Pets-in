@@ -164,7 +164,6 @@ async function sendPost(e) {
   const postResponse = await postContents(contents);
 
   if (postResponse.status === 201) {
-    console.log("게시글 등록!");
     // redirect되기 전에 beforeunload 이벤트 제거
     window.removeEventListener("beforeunload", handleBeforeUnload);
     window.location.assign("/myPetBoard");
